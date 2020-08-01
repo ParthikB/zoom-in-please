@@ -15,10 +15,9 @@ Umm ...I don't think I did a great job explaining this, but well, why don't you 
 
 ![](output.gif)
 
+<hr>
 
-So how to do this? That's simple, just follow the following steps and you'll be good to go!
-
-# PARAMETERS.PY:
+### PARAMETERS.PY:
 
 `INPUT_IMG_NAME     = 'data/sonic.jpg'` # The Image you want to rebuild (with complete path and extension)
 
@@ -42,12 +41,15 @@ So how to do this? That's simple, just follow the following steps and you'll be 
 
 `CODE_IMG_DIR       = '/media/parthikb/2E9D987E5CF82669/Pics/Trip-Kausani'` # The Directory in which the Code Images will be present.
 
+<hr>
+
+**So how to do this? That's simple, just follow the following steps and you'll be good to go!**
 
 1. First, you need to build a `Code.npy` that will have the information of your Images(from which you'll create other images).
 2. Change the Parameters in the `PARAMETERS.py` according to you.
 3. Run `python create_code.py`. This will create a Code file.
 4. Run `python run.py` and let the program do its job. You relax!
 
-Any suggestion? I'm always up for it!
+*Any suggestion? I'm always up for it!*
 
 Also, check out my website : <a href="https://www.parthiktalks.com"> parthiktalks.com </a>
