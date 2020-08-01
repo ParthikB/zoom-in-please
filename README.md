@@ -20,21 +20,34 @@ So how to do this? That's simple, just follow the following steps and you'll be 
 
 # PARAMETERS.PY:
 
-`INPUT_IMG_NAME     = 'data/sonic.jpg'`
-`RESIZE_TO          = 500`
-`SLICE_SIZE         = 5`
-`REBUILD_SLICE_SIZE = 100`
-`ALPHA              = 0.42`
-`OUTPUT_IMG_NAME    = 'sonic.jpg'`
+`INPUT_IMG_NAME     = 'data/sonic.jpg'` # The Image you want to rebuild (with complete path and extension)
 
-`CPU                = 2`
+`RESIZE_TO          = 500` # Default works fine in most of the cases. Still, you can play around.
 
-`CODE_IMG_SIZE      = 100`
-`IMG_EXTENSIONS     = ['jpg', 'png']`
-`CODE_NAME          = 'code1'`
-`CODE_IMG_DIR       = '/media/parthikb/2E9D987E5CF82669/Pics/Trip-Kausani'`
+`SLICE_SIZE         = 5` # The size of each slice. Thus, there will be 500/5 = 100 slices. Thus, 100x100 slices in total.
+
+`REBUILD_SLICE_SIZE = 100`# Leave Default
+
+`ALPHA              = 0.42`# Control the transparency of the Original Image overlayed onto the final image. Leave Default.
+
+`OUTPUT_IMG_NAME    = 'sonic.jpg'` # Name of the Output Image
+
+`CPU                = 2` # Numbers of CPUs to use in multiprocessing.
+
+`CODE_IMG_SIZE      = 100`# Leave Default
+
+`IMG_EXTENSIONS     = ['jpg', 'png']` # The extensions you want to focus on while selecting the Images in bulk.
+
+`CODE_NAME          = 'code1'`# Name of the Code file
+
+`CODE_IMG_DIR       = '/media/parthikb/2E9D987E5CF82669/Pics/Trip-Kausani'` # The Directory in which the Code Images will be present.
 
 
 1. First, you need to build a `Code.npy` that will have the information of your Images(from which you'll create other images).
 2. Change the Parameters in the `PARAMETERS.py` according to you.
-2. 
+3. Run `python create_code.py`. This will create a Code file.
+4. Run `python run.py` and let the program do its job. You relax!
+
+Any suggestion? I'm always up for it!
+
+Also, check out my website : <a href="https://www.parthiktalks.com"> parthiktalks.com </a>
