@@ -13,5 +13,5 @@ Umm ...I don't think I did a great job explaining this, but well, why don't you 
 
 <h2>Output Image :</h2>
 
-![](/data/output_images/sonic.jpg)
+![](output_gif.jpg)
 
