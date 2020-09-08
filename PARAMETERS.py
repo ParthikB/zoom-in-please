@@ -4,9 +4,9 @@ RESIZE_TO          = 500
 SLICE_SIZE         = 5
 REBUILD_SLICE_SIZE = 100
 ALPHA              = 0.42
-OUTPUT_IMG_NAME    = 'sonic.jpg'
+OUTPUT_IMG_NAME    = 'sonic_test.jpg'
 
-CPU                = 2
+CPU                = 1
 
 CODE_IMG_SIZE      = 100
 IMG_EXTENSIONS     = ['jpg', 'png']

@@ -12,9 +12,12 @@ import os, numpy as np, cv2, gc, matplotlib.pyplot as plt
 from tqdm import tqdm
 from multiprocessing import Pool
 
-
 import time
 from itertools import *
+
+global color_arr, code
+code      = np.load('data/codes/'+CODE_NAME+'.npy', allow_pickle=True).tolist()
+color_arr = np.array(code['color'])
 
 
 def show_dominant_color(img):
@@ -97,8 +100,8 @@ def find_match(dominant_color):
 # s = time.time()
 
 def generate_maps(SLICE_SIZE):
-    global color_arr
-    color_arr = np.array(code['color'])
+    # global color_arr
+    # color_arr = np.array(code['color'])
     slice_list = generate_slice_list(SLICE_SIZE)
     
     dominant_color_map = map(get_dominant_color, slice_list)
@@ -108,6 +111,8 @@ def generate_maps(SLICE_SIZE):
 
 
 def multi(P, FUNC, ITER):
+    # code = np.load('data/codes/'+CODE_NAME+'.npy', allow_pickle=True).tolist()
+    # color_arr = np.array(code['color'])
     p = Pool(processes=P)
     data = p.map(FUNC, ITER)
     p.close()
@@ -115,9 +120,9 @@ def multi(P, FUNC, ITER):
     return data
 
 def generate_maps_parallel(master_img, code_name, slice_size, cpu=2):
-    global color_arr, code
-    code = np.load('data/codes/'+CODE_NAME+'.npy', allow_pickle=True).tolist()
-    color_arr = np.array(code['color'])
+    # global color_arr, code
+    # code = np.load('data/codes/'+CODE_NAME+'.npy', allow_pickle=True).tolist()
+    # color_arr = np.array(code['color'])
     
     print('Parallelizing...')
     start = time.time()

@@ -13,7 +13,7 @@ Umm ...I don't think I did a great job explaining this, but well, why don't you 
 
 <h2>Output Image :</h2>
 
-![](output.gif)
+![](/data/output.gif)
 
 <hr>
 
